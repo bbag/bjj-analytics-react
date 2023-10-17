@@ -1,0 +1,61 @@
+.heatmap-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: auto minmax(0, 1fr);
+    margin-top: 2rem;
+}
+
+/* SVG */
+.heatmap-svg {
+    height: auto;
+    width: 14rem;
+}
+
+.outline,
+.part-buttons {
+    fill: none;
+}
+
+.heatmap {
+    filter: url(#heatmap-filter);
+    mask: url(#heatmap-mask);
+}
+
+.parts-blur {
+    fill: #FFF;
+}
+
+.outline {
+    fill: none;
+    stroke: #C4C7CC;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+}
+
+.background {
+    fill: #000;
+}
+
+.heatmap [data-part] {
+    fill: #FFF;
+    filter: blur(var(--b, 0.5rem));
+    filter: blur(var(--b, 0));
+    opacity: var(--o, 0.7);
+    transition: all 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.part-buttons [data-part] {
+    cursor: pointer;
+    fill: rgba(184, 212, 255, 0);
+    stroke: transparent;
+    transition: all 200ms ease-in-out;
+}
+
+.part-buttons [data-part]:hover {
+    fill: rgba(216, 232, 255, 0.2);
+}
+
+.part-buttons:hover [data-part] {
+    stroke: #C4C7CC;
+}

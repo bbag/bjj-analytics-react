@@ -1,0 +1,18 @@
+@use './_Fonts';
+@use './_Variables';
+@use './_Reset';
+@use './_Utils';
+
+html {
+    background: var(--color-bg, #E2E4E7);
+}
+
+body {
+    color: var(--color-accent, #1A1C1F);
+}
+
+pre {
+    background: rgb(126, 127, 129, 0.2);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}

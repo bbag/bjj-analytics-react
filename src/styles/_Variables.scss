@@ -1,0 +1,23 @@
+:root {
+    --color-accent: #1A1C1F;
+    --color-bg: #E2E4E7;
+    --color-card-bg: #F0F1F3;
+    --color-class-gi: #F84E5A;
+    --color-class-nogi: #19AFEE;
+    --color-class-openmat: #14CC33;
+    --color-highlight-faint: rgba(5, 15, 25, 0.05);
+    --color-hr: rgba(0, 0, 0, 0.15);
+    --font-main: Onest, Roboto, sans-serif;
+}
+
+// prefers dark mode
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-accent: #E1E2E6;
+        --color-bg: #282C34;
+        --color-card-bg: #373C47;
+        --color-class-openmat: #35E352;
+        --color-highlight-faint: rgba(195, 205, 212, 0.05);
+        --color-hr: rgba(255, 255, 255, 0.15);
+    }
+}

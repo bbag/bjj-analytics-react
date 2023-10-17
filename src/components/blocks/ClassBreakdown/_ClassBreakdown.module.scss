@@ -1,0 +1,24 @@
+.class-breakdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.donut-segment {
+    fill: none;
+    stroke: #000;
+    stroke-width: 16;
+    stroke-dasharray: 100;
+    transform-origin: 50% 50% 0;
+}
+
+.donut-segment[data-type='gi'] {
+    stroke: var(--color-class-gi);
+}
+
+.donut-segment[data-type='no-gi'] {
+    stroke: var(--color-class-nogi);
+}
+
+.donut-segment[data-type='open-mat'] {
+    stroke: var(--color-class-openmat);
+}

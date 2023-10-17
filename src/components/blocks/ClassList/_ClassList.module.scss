@@ -1,0 +1,45 @@
+.corner-button {
+    position: fixed;
+    right: 0.5rem;
+    top: 0.5rem;
+    z-index: 9;
+}
+
+.add-button {
+    position: fixed;
+    left: 0.5rem;
+    top: 0.5rem;
+    z-index: 9;
+}
+
+.class-table {
+    display: grid;
+}
+
+.class-item {
+    white-space: nowrap;
+}
+
+.class-item th,
+.class-item td {
+    padding: 0.625rem;
+    border-bottom: 1px solid var(--color-hr, #1A1C1F);
+    transition: background-color 100ms ease-in-out;
+}
+
+// Type column
+.class-item th:first-child,
+.class-item td:first-child {
+    width: 7rem;
+}
+
+// Actions column
+.class-item th:last-child,
+.class-item td:last-child {
+    width: 7rem;
+}
+
+.class-item:hover td,
+.class-item:focus-within td {
+    background: var(--color-highlight-faint, rgba(255, 255, 255, 0.1));
+}

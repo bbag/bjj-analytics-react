@@ -1,0 +1,34 @@
+.class-dot {
+    border-radius: 1rem;
+    content: '';
+    display: inline-block;
+    height: 0.75rem;
+    line-height: 1;
+    margin: 0;
+    width: 0.75rem;
+}
+
+.size-sm {
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
+.size-lg {
+    height: 0.875rem;
+    width: 0.875rem;
+}
+
+.type-gi {
+    // background: var(--color-gi, #F44336);
+    background: var(--color-gi, #F84E5A);
+}
+
+.type-no-gi {
+    // background: var(--color-no-gi, #4CAF50);
+    background: var(--color-no-gi, #19AFEE);
+}
+
+.type-open-mat {
+    // background: var(--color-open-mat, #2196F3);
+    background: var(--color-open-mat, #35E352);
+}

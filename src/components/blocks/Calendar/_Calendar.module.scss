@@ -1,0 +1,77 @@
+.calendar {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+}
+
+.month-name {
+    font-size: 0.875rem;
+    margin: 0 0 0.125rem;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+}
+
+.month-day-names,
+.month-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
+}
+
+.month-day-names {
+    background: rgba(201, 207, 219, 0.5);
+    padding: 0.25rem 0;
+    margin-bottom: 0.25rem;
+}
+
+.day-name {
+    font-size: 0.625rem;
+    text-align: center;
+}
+
+.month-day {
+    align-items: center;
+    aspect-ratio: 1;
+    background: none;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0.1875rem;
+}
+
+.day-dot {
+    aspect-ratio: 1;
+    background-color: rgba(68, 72, 85, 0.5);
+    border: 0;
+    border-radius: 50%;
+    display: flex;
+    transition: transform 200ms ease;
+    width: 75%;
+}
+
+.month-day:hover .day-dot,
+.month-day:focus-within  .day-dot{
+    transform: scale(1.75);
+}
+
+.month-day[data-type='gi'] .day-dot {
+    background-color: var(--color-class-gi);
+}
+
+.month-day[data-type='no-gi'] .day-dot {
+    background-color: var(--color-class-nogi);
+}
+
+.month-day[data-type='open-mat'] .day-dot {
+    background-color: var(--color-class-openmat);
+}
+
+// prefers dark mode
+@media (prefers-color-scheme: dark) {
+    .month-day-names {
+        background: rgb(157, 166, 187, 0.5);
+    }
+    .day-dot {
+        background-color: rgb(157, 166, 187, 0.5);
+    }
+}
